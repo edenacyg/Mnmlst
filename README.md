@@ -3,6 +3,7 @@ A simple web development project aimed at exploring and comparing different CSS 
 <h2>📃 Features: </h2>
 <ol type="1">
     <li>Interactive Accent Color Selection: Easily switch the site's accent color by clicking on the arrow icons.</li>
+    <li>Mobile responsive design.</li>
 </ol>
 
 <h2>🛠 Tools used: </h2>
