@@ -24,5 +24,5 @@ A simple web development project aimed at exploring and comparing different CSS 
     <li>Make the Stylus CSS preprocessor work without node modules.</li>
 </ul>
 
-<h2>🎞 Design reference: </h2>
+<h2>👀 Design reference: </h2>
 https://img.freepik.com/free-psd/horizontal-banner-template-minimal-style-art-gallery-with-man_23-2148821376.jpg?w=1480&t=st=1689924605~exp=1689925205~hmac=4201f60d022d038e8120be5a9237f4b4114db35d8f99111ead541a4c8bc4c316
