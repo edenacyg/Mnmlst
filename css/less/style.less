@@ -1,0 +1,220 @@
+//FONTS --importing
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@100;200;500;900&display=swap');
+
+//COLORS --variable declaration
+@accent-color: #e6b938;
+@primary-color: black;
+@secondary-color: grey;
+
+//DEVICES --custom media
+@large: 1366px;
+@medium: 768px;
+@small: 480px;
+
+//ICONS --mixins
+.iconStyle(@bgColor, @textColor){
+    color: @textColor;
+    background-color: @bgColor;  
+    border: 2px solid @primary-color;
+    border-radius: 100px;
+    padding: 5px;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;  
+    transition: background-color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+
+    h1,
+    h2,
+    h3 {
+        color: @primary-color;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    p,
+    a {
+        color: @primary-color;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+    }
+
+    header,
+    section {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+header {
+    nav a {
+        padding: 0 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: @accent-color;
+        }
+
+        &.active {
+            color: @accent-color;
+        }
+    }
+
+    #menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+section { //hero section
+    .vertical-line {
+        width: 2px;
+        height: 20vw;
+        background: @primary-color;
+    }
+
+    .circle {
+        margin: 3% 0;
+        width: 62vmin;
+        height: 62vmin;
+        border-radius: 50%;
+        background-color: @accent-color;
+        display: flex;
+        transition: border-radius 0.3s ease;
+
+        &:hover {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
+        }
+
+        h1 {
+            font-size: clamp(20px, 6vw, 3rem);
+            margin-left: -30px;
+        }
+    }
+
+    .hero-subheading {
+        width: 15rem;
+        z-index: 999;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        a {
+            .iconStyle(@primary-color, white)     
+        }
+    }
+
+    .slider-icons {
+        display: flex;
+        flex-wrap: nowrap;
+        z-index: 999;
+
+        a {
+            .iconStyle(white, @primary-color)
+        }
+    }
+
+    .slider-icons a:hover,
+    .social-icons a:hover {
+        background-color: @accent-color;
+        border: 2px solid @accent-color;
+    }
+}
+
+.subject {
+    width: 100%;
+
+    img {
+        height: auto;
+        width: clamp(22rem, 75vw, 735px);
+        position: absolute;
+        left: calc(100% / 2);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.bars {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    .bar {
+        height: 100px;
+    }
+
+    div.bar:first-child {
+        background-color: @accent-color;
+    }
+    
+    div.bar:nth-child(2) {
+        background-color: @primary-color;
+    }
+    
+    div.bar:nth-child(3) {
+        background-color: @secondary-color;
+    }
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 80px 0;
+
+    img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.9s ease;
+
+        &:hover {
+            filter: none;
+        }
+    }
+}
+
+@media (max-width: @medium) {
+    .hero-img {
+        height: clamp(10rem, 400px, 47rem);
+        width: clamp(10rem, 400px, 47rem);
+    }
+
+    nav {
+        display: none;
+    }
+
+    header #menu-toggle {
+        display: block;
+    }
+
+    section .vertical-line {
+        height: 12vw;
+    }
+}
+
+@media (max-width: @small) {
+    section .vertical-line {
+        background: white;
+    }
+}
