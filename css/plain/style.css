@@ -86,6 +86,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    z-index: 999;
 }
 
 .social-icons a {
@@ -106,6 +107,7 @@ nav a:hover {
 .slider-icons {
     display: flex;
     flex-wrap: nowrap;
+    z-index: 999;
 }
 
 .slider-icons a {
@@ -212,4 +214,8 @@ div.bar:nth-child(3) {
     .vertical-line {
         background: white;
     }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    } 
 }

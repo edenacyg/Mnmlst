@@ -85,8 +85,9 @@ section .social-icons a {
   justify-content: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  z-index: 999;
 }
-section .social-icons:hover {
+section .social-icons a:hover {
   background-color: #e6b938;
   border: 2px solid #e6b938;
 }
@@ -110,6 +111,7 @@ section .social-icons:hover {
   justify-content: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  z-index: 999;
 }
 .slider-icons a:hover {
   background-color: #e6b938;
@@ -182,5 +184,8 @@ section .social-icons:hover {
 @media (max-width: 480px) {
   .vertical-line {
     background: white !important;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }/*# sourceMappingURL=style.css.map */

@@ -27,6 +27,7 @@
     justify-content: center;
     text-decoration: none;  
     transition: background-color 0.3s ease;
+    z-index: 999;
 }
 
 body {
@@ -217,4 +218,8 @@ section { //hero section
     section .vertical-line {
         background: white;
     }
+
+    .gallery {
+		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	}
 }
