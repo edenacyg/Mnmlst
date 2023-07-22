@@ -152,7 +152,7 @@ nav a:hover {
 .bars {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 }
 
 .bar {
